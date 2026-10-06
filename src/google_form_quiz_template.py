@@ -40,11 +40,10 @@ class GoogleFormQuizTemplate(BaseModel):
 
         return quiz_questions
 
-
     def get_form_title(self) -> str:
         today = datetime.date.today().strftime("%d.%m.%Y")
 
-        return f"[{today}] " f"[{self.grade_label}] " f"[{self.topic}] " f"Тестування"
+        return f"[{today}] [{self.grade_label}] [{self.topic}] Опитувальник"
 
     def get_form_description(self) -> str:
         description = f"Тема: {self.topic}\n"
