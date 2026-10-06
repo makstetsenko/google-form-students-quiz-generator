@@ -17,9 +17,10 @@ def main():
     quiz_template = google_form_quiz_template.read_from_yaml_file(app_args.quiz_template_path)
     google_form = api_client.create_google_form(auth_form_service, quiz_template)
 
-    logger.info(f"Google Form created: {google_form.form_id}")
+    logger.info(f"Google Form created: {google_form.title}")
     logger.info(f"Google Form Edit URL: {google_form.edit_url}")
     logger.info(f"Google Form Responder URL: {google_form.responder_url}")
+    logger.info(f"Homework for students:\nДомашнє завдання:\nПідручник ст: {quiz_template.text_book_pages}\nПройти опитування за посиланням: {google_form.responder_url}")
 
 
 if __name__ == "__main__":

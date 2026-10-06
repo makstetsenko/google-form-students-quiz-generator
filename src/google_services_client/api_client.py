@@ -8,6 +8,7 @@ from src.google_form_quiz_template import GoogleFormQuizTemplate
 @dataclass
 class GoogleForm:
     form_id: str
+    title: str
     edit_url: str
     responder_url: str
 
@@ -213,4 +214,5 @@ def create_google_form(
         form_id=form_id,
         edit_url=f"https://docs.google.com/forms/d/{form_id}/edit",
         responder_url=final_form["responderUri"],
+        title=final_form["info"]["title"]
     )
