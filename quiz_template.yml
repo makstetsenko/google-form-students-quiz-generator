@@ -7,7 +7,7 @@ classes:
 topic: "Інформаційні системи"
 text_book_pages: "12-15"
 
-# must be 5 quiz question
+
 quiz_questions:
   - text: "Що називають інформаційною системою?"
     options:

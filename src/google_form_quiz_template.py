@@ -35,8 +35,8 @@ class GoogleFormQuizTemplate(BaseModel):
     @field_validator("quiz_questions")
     @classmethod
     def validate_quiz_questions(cls, quiz_questions):
-        if len(quiz_questions) != 5:
-            raise ValueError("Google Form must contain exactly 5 quiz questions")
+        if len(quiz_questions) < 1:
+            raise ValueError("Google Form must contain at least 1 quiz questions")
 
         return quiz_questions
 
